@@ -10,10 +10,10 @@ ln -s $CONFIG_DIR/.tmux.conf $HOME/
 ln -s $CONFIG_DIR/.gmshrc $HOME/
 
 # OhMyZSH Themes
-ln -s $CONFIG_DIR/agnoster-minimal.zsh-theme $ZSH/themes/agnoster-minimal.zsh-theme
-ln -s $CONFIG_DIR/agnoster-mod.zsh-theme $ZSH/themes/agnoster-mod.zsh-theme
-ln -s $CONFIG_DIR/zsh-syntax-highlighting $ZSH/plugins/zsh-syntax-highlighting
-ln -s $CONFIG_DIR/zsh-autosuggestions $ZSH/plugins/zsh-autosuggestions
+ln -s $CONFIG_DIR/agnoster-minimal.zsh-theme $ZSH/themes/
+ln -s $CONFIG_DIR/agnoster-mod.zsh-theme $ZSH/themes/
+ln -s $CONFIG_DIR/zsh-syntax-highlighting $ZSH/plugins/
+ln -s $CONFIG_DIR/zsh-autosuggestions $ZSH/plugins
 
 # To run sudo commands when not using root
 SUDO=""
