@@ -1,19 +1,17 @@
-# #!/bin/bash/
-
-CONFIG_DIR='$HOME/Config-Files'
+#!/bin/bash/
 
 # Symlinks for config files
-ln -s $CONFIG_DIR/.LS_COLORS $HOME/
-ln -s $CONFIG_DIR/.conkyrc $HOME/
-ln -s $CONFIG_DIR/.zshrc $HOME/
-ln -s $CONFIG_DIR/.tmux.conf $HOME/
-ln -s $CONFIG_DIR/.gmshrc $HOME/
+ln -s ~/Config-Files/.LS_COLORS $HOME/
+ln -s ~/Config-Files/.conkyrc $HOME/
+ln -s ~/Config-Files/.zshrc $HOME/
+ln -s ~/Config-Files/.tmux.conf $HOME/
+ln -s ~/Config-Files/.gmshrc $HOME/
 
 # OhMyZSH Themes
-ln -s $CONFIG_DIR/agnoster-minimal.zsh-theme $ZSH/themes/
-ln -s $CONFIG_DIR/agnoster-mod.zsh-theme $ZSH/themes/
-ln -s $CONFIG_DIR/zsh-syntax-highlighting $ZSH/plugins/
-ln -s $CONFIG_DIR/zsh-autosuggestions $ZSH/plugins
+ln -s ~/Config-Files/agnoster-minimal.zsh-theme $ZSH/themes/
+ln -s ~/Config-Files/agnoster-mod.zsh-theme $ZSH/themes/
+ln -s ~/Config-Files/zsh-syntax-highlighting $ZSH/plugins/
+ln -s ~/Config-Files/zsh-autosuggestions $ZSH/plugins/
 
 # To run sudo commands when not using root
 SUDO=""
@@ -25,8 +23,8 @@ else
 fi
 
 # Symlinks for Themes
-$SUDO ln -s $CONFIG_DIR/Adapta-Orange-Nokto-Eta /usr/share/themes
-$SUDO ln -s $CONFIG_DIR/Adapta-Dots /usr/share/themes
+$SUDO ln -s ~/Config-Files/Adapta-Orange-Nokto /usr/share/themes
+$SUDO ln -s ~/Config-Files/Adapta-Dots /usr/share/themes
 
 
 
