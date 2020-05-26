@@ -9,25 +9,19 @@
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster-mod"
 
-# Set list of themes to load
-# Setting this variable when ZSH_THEME=random
-# cause zsh load theme from this variable instead of
-# looking in ~/.oh-my-zsh/themes/
-# An empty array have no effect
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -39,7 +33,7 @@ ZSH_THEME="agnoster-mod"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -59,13 +53,15 @@ ZSH_THEME="agnoster-mod"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
   zsh-syntax-highlighting
   zsh-autosuggestions
   command-not-found
 )
 
+# Sourcing OhMyZSH
 . $ZSH/oh-my-zsh.sh
+
+#Source commands from OpenFoam7
 . /opt/openfoam7/etc/bashrc
 
 # Source conda and set the config as base false
@@ -90,7 +86,7 @@ conda deactivate
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -114,6 +110,9 @@ compinit
 echo ""
 echo "¯\_(ツ)_/¯"
 echo ""
+echo ""
+echo "$(/usr/lib/update-notifier/apt-check --human-readable)"  
+
 
 # XD
 alias clear='clear;echo "\n¯\_(ツ)_/¯"'
@@ -148,4 +147,13 @@ alias paste="xclip -selection c -o"
 alias dir_thesis_res="cd /mnt/IMP/Work/Thesis/ValidationCase/Results/"
 alias dir_tf="cd /mnt/IMP/Work/Thesis/NeuralNetwork/TensorFlow/"
 
+# Alias to start an instance of JupyterLab for Google Colab Notebook
+alias jupyter_collab="jupyter notebook --NotebookApp.allow_origin='https://colab.research.google.com'   --port=9090 --no-browser --NotebookApp.port_retries=0 --NotebookApp.disable_check_xsrf=True --NotebookApp.token=''"
 
+# Alias for git
+alias ga="git add ."
+alias gcm="git commit -m"
+alias gpom="git push origin master"
+
+# Alias for Python3
+alias py="python3"

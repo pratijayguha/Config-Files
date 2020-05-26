@@ -21,6 +21,8 @@ ${color orange}Hostname: ${color}${nodename}
 ${color orange}Kernel:   ${color}${sysname} ${kernel} on ${machine}
 ${color orange}Uptime:   ${color}${uptime}
 ${hr}
+${exec /usr/lib/update-notifier/apt-check --human-readable}
+${hr}
 ${color orange}CPU:${color} ${freq_g} GHz
 ${color orange}1:${color} ${cpu cpu1}% ${cpubar cpu1}
 ${color orange}2:${color} ${cpu cpu2}% ${cpubar cpu2}
@@ -34,8 +36,9 @@ ${color lightgrey} ${top name 3} ${top pid 3} ${top cpu 3} ${top mem 3}
 ${color lightgrey} ${top name 4} ${top pid 4} ${top cpu 4} ${top mem 4}
 ${hr}
 ${color orange}GPU:${color #FCAF3E}${exec nvidia-smi --query-gpu=gpu_name --format=csv,noheader,nounits} $color
-${color orange}GPU Temperature ${color}  ${execi 60  nvidia-smi -q -d temperature | sed -n 11p | cut -c 39-40}°C
+${color orange}GPU Temperature ${color}  ${execi 60  nvidia-smi -q -d temperature | sed -n 11p | cut -c 39-40}C
 ${color orange}GPU Utilization ${color} ${exec nvidia-smi | grep % | cut -c 61-63}%
+${color orange}GPU MemoryUsage ${color} ${exec nvidia-smi | grep % | cut -c 36-55}
 ${hr}
 ${color orange}RAM:  ${color}${mem}/${memmax}
 ${memperc}% ${membar 4}
