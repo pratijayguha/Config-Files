@@ -26,3 +26,4 @@ fi
 # Symlinks for Themes
 $SUDO rm -rf /usr/share/themes/Adapta-Orange-Nokto-Eta
 $SUDO rm -rf /usr/share/themes/Adapta-Dots
+$SUDO rm -rf //usr/share/icons/Vimix-cursors

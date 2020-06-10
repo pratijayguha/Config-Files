@@ -25,6 +25,4 @@ fi
 # Symlinks for Themes
 $SUDO ln -s ~/Config-Files/Adapta-Orange-Nokto /usr/share/themes
 $SUDO ln -s ~/Config-Files/Adapta-Dots /usr/share/themes
-
-
-
+$SUDO ln -s ~/Config-Files/Vimix-cursors /usr/share/icons
