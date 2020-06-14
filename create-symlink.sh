@@ -13,6 +13,9 @@ ln -s ~/Config-Files/agnoster-mod.zsh-theme $ZSH/themes/
 ln -s ~/Config-Files/zsh-syntax-highlighting $ZSH/plugins/
 ln -s ~/Config-Files/zsh-autosuggestions $ZSH/plugins/
 
+# Symlinks for Neovim
+ln -s ~/Config-Files/nvim ~/.config/
+
 # To run sudo commands when not using root
 SUDO=""
 if [ "$(whoami)" = "root" ] ; then
@@ -26,3 +29,5 @@ fi
 $SUDO ln -s ~/Config-Files/Adapta-Orange-Nokto /usr/share/themes
 $SUDO ln -s ~/Config-Files/Adapta-Dots /usr/share/themes
 $SUDO ln -s ~/Config-Files/Vimix-cursors /usr/share/icons
+
+

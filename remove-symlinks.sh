@@ -14,6 +14,9 @@ rm -rf $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting
 rm -rf $HOME/.oh-my-zsh/themes/agnoster-minimal.zsh-theme
 rm -rf $HOME/.oh-my-zsh/themes/agnoster-mod.zsh-theme
 
+# Symlinks for nvim config files
+rm -rf $HOME/.config/nvim
+
 # To run sudo commands when not using root
 SUDO=""
 if [ "$(whoami)" = "root" ] ; then
@@ -26,4 +29,4 @@ fi
 # Symlinks for Themes
 $SUDO rm -rf /usr/share/themes/Adapta-Orange-Nokto-Eta
 $SUDO rm -rf /usr/share/themes/Adapta-Dots
-$SUDO rm -rf //usr/share/icons/Vimix-cursors
+$SUDO rm -rf /usr/share/icons/Vimix-cursors
