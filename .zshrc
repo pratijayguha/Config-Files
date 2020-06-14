@@ -157,3 +157,5 @@ alias gpom="git push origin master"
 
 # Alias for Python3
 alias py="python3"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

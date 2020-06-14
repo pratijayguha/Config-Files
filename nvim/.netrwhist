@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/mnt/IMP/Work/Thesis/NeuralNetwork/DeepLearning-RarefiedFlows'
+let g:netrw_dirhist_5='/home/hega'
+let g:netrw_dirhist_4='/mnt/IMP/Work/Thesis/NeuralNetwork/DeepLearning-RarefiedFlows/Report'
+let g:netrw_dirhist_3='/mnt/IMP/Work/Thesis/NeuralNetwork/DeepLearning-RarefiedFlows/Report/deeplearning/results'
+let g:netrw_dirhist_2='/mnt/IMP/Work/Thesis/NeuralNetwork/DeepLearning-RarefiedFlows/Report/deeplearning'
+let g:netrw_dirhist_1='/mnt/IMP/Work/Thesis/NeuralNetwork/DeepLearning-RarefiedFlows/Report'
