@@ -18,23 +18,18 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'itchyny/lightline.vim'
     " A Vim Plugin for Lively Previewing LaTeX PDF Output
     Plug 'lervag/vimtex', {'for': 'tex'}
-
     " LaTex Compiler for Vim
     Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
-
     " Battery Plugin for statusline
     Plug 'lambdalisue/battery.vim'
-
     " Installing GruvBox for theming
     Plug 'morhetz/gruvbox'
-    
     " Install Dracula Theme
     Plug 'dracula/vim', { 'as': 'dracula' }
-    
     " Comments enabler
     Plug 'tpope/vim-commentary'
-    
     " FZF Plugin
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-
+    " Plugin for viewing different buffernames
+    Plug 'bling/vim-bufferline'
     call plug#end()

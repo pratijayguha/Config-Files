@@ -31,10 +31,10 @@ tnoremap <Esc> <C-\><C-n>
 " Key to autosave on double escape
 inoremap <Esc><Esc> <Esc>:update<CR>
 
-" Tab management
-nmap <C-left> <Esc>:tabprev<CR>
-nmap <C-right> <Esc>:tabnext<CR>
-nmap <C-n> <Esc>:tabnew
+" Buffer management
+noremap <C-left> <Esc>:bprevious<CR>
+noremap <C-right> <Esc>:bnext<CR>
+noremap nnoremap gb :buffers<CR>:buffer<Space>
 
 " Shortcut to create a new split with terminal in CWD.
 noremap <C-\> <Esc>:vsplit<bar>:lcd%:p:h<bar>:terminal<CR>
