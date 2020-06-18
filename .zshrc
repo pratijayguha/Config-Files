@@ -163,4 +163,3 @@ alias hibernate="sudo xscreensaver-command -lock && sudo pm-hibernate"
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
