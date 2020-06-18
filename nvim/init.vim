@@ -1,4 +1,5 @@
 source $HOME/.config/nvim/vim-plug/plugins.vim
+source $HOME/.config/nvim/plug-config/coc.vim
 
 set number " Set lines Numbering
 
@@ -39,3 +40,7 @@ noremap nnoremap gb :buffers<CR>:buffer<Space>
 " Shortcut to create a new split with terminal in CWD.
 noremap <C-\> <Esc>:vsplit<bar>:lcd%:p:h<bar>:terminal<CR>
 
+" Supported langiages for kite
+let g:kite_supported_languages = ['python']
+let g:kite_auto_complete=1
+let g:kite_tab_complete=1

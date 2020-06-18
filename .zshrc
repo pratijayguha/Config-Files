@@ -158,4 +158,9 @@ alias gpom="git push origin master"
 # Alias for Python3
 alias py="python3"
 
+# Alias for hibernation
+alias hibernate="sudo xscreensaver-command -lock && sudo pm-hibernate" 
+
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+

@@ -32,4 +32,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     " Plugin for viewing different buffernames
     Plug 'bling/vim-bufferline'
+    
+    " Install CoC autocomplete
+    Plug 'neoclide/coc.nvim', {'branch': 'release'} 
     call plug#end()
+
