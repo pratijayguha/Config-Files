@@ -2,8 +2,8 @@
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  "autocmd VimEnter * PlugInstall
-  "autocmd VimEnter * PlugInstall | source $MYVIMRC
+autocmd VimEnter * PlugInstall
+" autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
@@ -30,10 +30,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-commentary'
     " FZF Plugin
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-    " Plugin for viewing different buffernames
-    Plug 'bling/vim-bufferline'
-    
     " Install CoC autocomplete
     Plug 'neoclide/coc.nvim', {'branch': 'release'} 
-    call plug#end()
+    " Install Plugin lightline-bufferline
+    Plug 'mengelbrecht/lightline-bufferline'
+    " Install Plugin for startupscreen
+    Plug 'mhinz/vim-startify'
 
+    call plug#end()

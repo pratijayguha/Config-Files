@@ -2,6 +2,7 @@ source $HOME/.config/nvim/vim-plug/plugins.vim
 source $HOME/.config/nvim/plug-config/coc.vim
 
 set number " Set lines Numbering
+set hidden " Permit hidden buffers
 
 " Set tab spacing to 4
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
@@ -17,7 +18,10 @@ let NERDTreeShowHidden=1
 map <silent> <C-b> <Esc>:NERDTreeToggle<CR>
 
 " Set leader key in vim
-let mapleader = ","
+let mapleader = " "
+
+" Use mouse in vim
+set mouse=a
 
 " Set terminal to use ZSH
 :set shell=/usr/bin/zsh
@@ -33,14 +37,22 @@ tnoremap <Esc> <C-\><C-n>
 inoremap <Esc><Esc> <Esc>:update<CR>
 
 " Buffer management
-noremap <C-left> <Esc>:bprevious<CR>
-noremap <C-right> <Esc>:bnext<CR>
-noremap nnoremap gb :buffers<CR>:buffer<Space>
+noremap <leader>[ <Esc>:bprevious<CR>
+noremap <leader>] <Esc>:bnext<CR>
+noremap gb <Esc>:buffers<CR>:buffer<Space>
 
 " Shortcut to create a new split with terminal in CWD.
 noremap <C-\> <Esc>:vsplit<bar>:lcd%:p:h<bar>:terminal<CR>
 
-" Supported langiages for kite
-let g:kite_supported_languages = ['python']
-let g:kite_auto_complete=1
-let g:kite_tab_complete=1
+
+let g:lightline#bufferline#show_number  = 1
+let g:lightline#bufferline#shorten_path = 0
+let g:lightline#bufferline#unnamed      = '[No Name]'
+set showtabline=2
+let g:lightline#bufferline#filename_modifier = ':t'
+let g:lightline = {'colorscheme': 'wombat'}
+let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
+let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
+let g:lightline.component_type   = {'buffers': 'tabsel'}
+
+autocmd BufWritePost,TextChanged,TextChangedI * call lightline#update()
