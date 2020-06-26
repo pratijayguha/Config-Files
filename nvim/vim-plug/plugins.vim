@@ -37,6 +37,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Install Plugin for startupscreen
     Plug 'mhinz/vim-startify'
     " Install Plugin for Git control
-    Plug 'mhinz/vim-signify'
+    Plug 'tpope/vim-fugitive'
+    Plug 'airblade/vim-gitgutter'
 
     call plug#end()
