@@ -2,8 +2,8 @@
 
 # Symlinks for Config Files
 rm -rf $HOME/.LS_COLORS
-rm -rf $HOME/.conkyrc
-# rm -rf $HOME/.zshrc
+rm -rf $XDG_CONFIG_HOME/conky/.conkyrc
+rm -rf $ZDOTDIR/.zshrc
 rm -rf $HOME/.tmux.conf
 rm -rf $HOME/.gmshrc
 

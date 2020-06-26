@@ -1,4 +1,5 @@
 source $HOME/.config/nvim/vim-plug/plugins.vim
+source $HOME/.config/nvim/plug-config/start-page.vim
 source $HOME/.config/nvim/plug-config/coc.vim
 
 set number " Set lines Numbering

@@ -36,5 +36,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mengelbrecht/lightline-bufferline'
     " Install Plugin for startupscreen
     Plug 'mhinz/vim-startify'
+    " Install Plugin for Git control
+    Plug 'tpope/vim-fugitive'
 
     call plug#end()

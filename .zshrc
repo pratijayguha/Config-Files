@@ -65,7 +65,7 @@ plugins=(
 . /opt/openfoam7/etc/bashrc
 
 # Source conda and set the config as base false
-. /home/hega/.anaconda/bin/activate
+. $HOME/.anaconda/bin/activate
 conda deactivate
 
 # User configuration

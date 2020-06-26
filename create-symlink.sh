@@ -2,8 +2,8 @@
 
 # Symlinks for config files
 ln -s ~/Config-Files/.LS_COLORS $HOME/
-ln -s ~/Config-Files/.conkyrc $HOME/
-ln -s ~/Config-Files/.zshrc $HOME/
+ln -s ~/Config-Files/.conkyrc $XDG_CONFIG_HOME/conky/.conkyrc
+ln -s ~/Config-Files/.zshrc $ZDOTDIR/.zshrc
 ln -s ~/Config-Files/.tmux.conf $HOME/
 ln -s ~/Config-Files/.gmshrc $HOME/
 
@@ -14,7 +14,7 @@ ln -s ~/Config-Files/zsh-syntax-highlighting $ZSH/plugins/
 ln -s ~/Config-Files/zsh-autosuggestions $ZSH/plugins/
 
 # Symlinks for Neovim
-ln -s ~/Config-Files/nvim ~/.config/
+ln -s ~/Config-Files/nvim $HOME/.config/
 
 # To run sudo commands when not using root
 SUDO=""
