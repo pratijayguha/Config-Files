@@ -1,6 +1,7 @@
 source $HOME/.config/nvim/vim-plug/plugins.vim
-source $HOME/.config/nvim/plug-config/start-page.vim
 source $HOME/.config/nvim/plug-config/coc.vim
+source $HOME/.config/nvim/plug-config/start-page.vim
+source $HOME/.config/nvim/plug-config/gitgutter.vim
 
 set number " Set lines Numbering
 set hidden " Permit hidden buffers
