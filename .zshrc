@@ -145,7 +145,7 @@ alias copy="xclip -selection c"
 alias paste="xclip -selection c -o"
 
 alias dir_thesis_res="cd /mnt/IMP/Work/Thesis/ValidationCase/Results/"
-alias dir_tf="cd /mnt/IMP/Work/Thesis/NeuralNetwork/TensorFlow/"
+alias dir_tf="cd /mnt/IMP/Work/Thesis/DeepLearning-RarefiedFlows/"
 
 # Alias to start an instance of JupyterLab for Google Colab Notebook
 alias jupyter_collab="jupyter notebook --NotebookApp.allow_origin='https://colab.research.google.com'   --port=9090 --no-browser --NotebookApp.port_retries=0 --NotebookApp.disable_check_xsrf=True --NotebookApp.token=''"
