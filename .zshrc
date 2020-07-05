@@ -111,7 +111,7 @@ echo ""
 echo "¯\_(ツ)_/¯"
 echo ""
 echo ""
-echo "$(/usr/lib/update-notifier/apt-check --human-readable)"  
+# echo "$(/usr/lib/update-notifier/apt-check --human-readable)"  
 
 
 # XD
@@ -152,8 +152,12 @@ alias jupyter_collab="jupyter notebook --NotebookApp.allow_origin='https://colab
 
 # Alias for git
 alias ga="git add ."
+alias gs="git status"
 alias gcm="git commit -m"
-alias gpom="git push origin master"
+alias gpom="git push "
+
+# Alias to change wallpaper
+alias W="nitrogen --set-zoom-fill --random /mnt/Stuff/Personal/Wallpaper/" 
 
 # Alias for Python3
 alias py="python3"
