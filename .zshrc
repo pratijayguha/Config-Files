@@ -61,6 +61,9 @@ plugins=(
 # Sourcing OhMyZSH
 . $ZSH/oh-my-zsh.sh
 
+# Source FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 #Source commands from OpenFoam7
 . /opt/openfoam7/etc/bashrc
 

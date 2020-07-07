@@ -2,6 +2,7 @@ source $HOME/.config/nvim/vim-plug/plugins.vim
 source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/plug-config/start-page.vim
 source $HOME/.config/nvim/plug-config/gitgutter.vim
+source $HOME/.config/nvim/plug-config/vintex.vim
 
 set number " Set lines Numbering
 set hidden " Permit hidden buffers
@@ -58,3 +59,12 @@ let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
 let g:lightline.component_type   = {'buffers': 'tabsel'}
 
 autocmd BufWritePost,TextChanged,TextChangedI * call lightline#update()
+
+" Set transparency
+hi Normal guibg=NONE ctermbg=NONE
+
+" Set copy paste as global clipboard
+nnoremap pg "+p<CR>
+vnoremap yg "+y<CR>
+nnoremap yy "+yy<CR>
+
