@@ -418,8 +418,8 @@ globalkeys = my_table.join(
               {description = "restore minimized", group = "client"}),
 
     -- Dropdown application
-    awful.key({ modkey, }, "z", function () awful.screen.focused().quake:toggle() end,
-              {description = "dropdown application", group = "launcher"}),
+    -- awful.key({ modkey, }, "z", function () awful.screen.focused().os.execute("guake -t") end,
+              -- {description = "dropdown application", group = "launcher"}),
 
     -- Widgets popups
     awful.key({ altkey, }, "c", function () if beautiful.cal then beautiful.cal.show(7) end end,
@@ -678,18 +678,29 @@ awful.rules.rules = {
      }
     },
 
-    -- Panels on top
+    -- Floating Panels
     { rule_any = {
             name = {
                 "plank",
-                "xfce4-panel",
+                "xfce4-panel"
+            }
+        },
+
+        properties = {
+            ontop = true
+        }
+    },
+    -- Panels on top
+    { rule_any = {
+            name = {
                 "guake",
                 "kazam"
             }
         },
 
         properties = {
-            ontop = true
+            ontop = true,
+            floating = true
         }
     },
     -- Titlebars
