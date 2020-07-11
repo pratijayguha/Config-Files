@@ -98,7 +98,7 @@ local browser      = os.getenv("BROWSER") or "firefox"
 local scrlocker    = "xscreensaver-command -lock"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { "1", "2", "3", "4", "5" }
+awful.util.tagnames = { "", "", "", "", "", "" }
 -- awful.tag({ "1", "2", "3", "4"}, s, awful.layout.layouts[1])
 awful.layout.layouts = {
     awful.layout.suit.tile,
@@ -436,24 +436,39 @@ globalkeys = my_table.join(
               {description = "-10%", group = "hotkeys"}),
 
     -- ALSA volume control
+    awful.key({}, "XF86AudioPlay",
+        function() 
+            os.execute(string.format("playerctl play-pause"))
+        end,
+        {description = "toggle play/pause", group = "media"}),
+    awful.key({}, "XF86AudioNext", 
+        function()
+            os.execute(string.format("playerctl next"))
+        end,
+        {description = "play next", group = "media"}),
+    awful.key({}, "XF86AudioPrev",
+        function() 
+            os.execute(string.format("playerctl previous"))   
+        end,
+        {description = "play previous", group = "media"}),
     awful.key({  }, "XF86AudioRaiseVolume",
         function ()
             os.execute(string.format("amixer -D pulse sset Master 10%%+", beautiful.volume.channel))
             beautiful.volume.update()
         end,
-        {description = "volume up", group = "hotkeys"}),
+        {description = "volume up", group = "media"}),
     awful.key({  }, "XF86AudioLowerVolume",
         function ()
             os.execute(string.format("amixer -D pulse sset Master 10%%-", beautiful.volume.channel))
             beautiful.volume.update()
         end,
-        {description = "volume down", group = "hotkeys"}),
+        {description = "volume down", group = "media"}),
     awful.key({ }, "XF86_AudioMute",
         function ()
             os.execute(string.format("amixer -D pulse sset Master toggle", beautiful.volume.togglechannel or beautiful.volume.channel))
             beautiful.volume.update()
         end,
-        {description = "toggle mute", group = "hotkeys"}),
+        {description = "toggle mute", group = "media"}),
 
     -- MPD control
     awful.key({ altkey, "Control" }, "Up",
@@ -700,7 +715,6 @@ awful.rules.rules = {
 
         properties = {
             ontop = true,
-            floating = true
         }
     },
     -- Titlebars
@@ -780,8 +794,8 @@ end)
 --     c:emit_signal("request::activate", "mouse_enter", {raise = vi_focus})
 -- end)
 
--- client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
--- client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
+client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
 -- possible workaround for tag preservation when switching back to default screen:
 -- https://github.com/lcpz/awesome-copycats/issues/251
@@ -805,4 +819,6 @@ run_once("compton")
 run_once("blueman-applet")
 run_once("conky")
 run_once("xscreensaver")
+run_once("nm-applet")
+run_once("guake")
 -- {{{

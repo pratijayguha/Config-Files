@@ -110,10 +110,8 @@ autoload -Uz compinit
 compinit
 
 # Cheap thrills
-echo ""
-echo "¯\_(ツ)_/¯"
-echo ""
-echo ""
+echo "\n$(fortune -s)\n\n"
+
 # echo "$(/usr/lib/update-notifier/apt-check --human-readable)"  
 
 
@@ -157,7 +155,7 @@ alias jupyter_collab="jupyter notebook --NotebookApp.allow_origin='https://colab
 alias ga="git add ."
 alias gs="git status"
 alias gcm="git commit -m"
-alias gpom="git push "
+alias gp="git push"
 
 # Alias to change wallpaper
 alias W="nitrogen --set-zoom-fill --random /mnt/Stuff/Personal/Wallpaper/" 
@@ -168,5 +166,5 @@ alias py="python3"
 # Alias for hibernation
 alias hibernate="sudo xscreensaver-command -lock && sudo pm-hibernate" 
 
-
+TERM=xterm-256color
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -7,6 +7,9 @@ source $HOME/.config/nvim/plug-config/vintex.vim
 set number " Set lines Numbering
 set hidden " Permit hidden buffers
 
+" Trial to get it working with Alacritty
+set t_ut=
+
 " Set tab spacing to 4
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
@@ -64,7 +67,6 @@ autocmd BufWritePost,TextChanged,TextChangedI * call lightline#update()
 hi Normal guibg=NONE ctermbg=NONE
 
 " Set copy paste as global clipboard
-nnoremap pg "+p<CR>
-vnoremap yg "+y<CR>
-nnoremap yy "+yy<CR>
-
+nnoremap pg "+p
+vnoremap yg "+y
+nnoremap yy "+yy

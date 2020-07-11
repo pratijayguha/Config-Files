@@ -5,6 +5,7 @@ ln -s ~/Config-Files/.LS_COLORS $HOME/
 ln -s ~/Config-Files/.conkyrc $HOME/.conkyrc
 ln -s ~/Config-Files/.zshrc $ZDOTDIR/.zshrc
 ln -s $HOME/Config-Files/awesome $XDG_CONFIG_HOME/
+ln -s $HOME/Config-Files/.zshenv $HOME/
 ln -s ~/Config-Files/.tmux.conf $HOME/
 ln -s ~/Config-Files/.gmshrc $HOME/
 

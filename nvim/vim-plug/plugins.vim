@@ -39,5 +39,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Install Plugin for Git control
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
+    " Install Colorizer for hex colours
+    Plug 'lilydjwg/colorizer'
+    
+
+
 
     call plug#end()

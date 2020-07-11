@@ -18,13 +18,13 @@ conky.config = {
 
 conky.text = [[
 ${color orange}Hostname: ${color}${nodename}
-${color orange}Kernel:   ${color}${sysname} ${kernel} on ${machine}
+# ${color orange}Kernel:   ${color}${sysname} ${kernel} on ${machine}
 ${color orange}Uptime:   ${color}${uptime}
-${hr}
-${exec /usr/lib/update-notifier/apt-check --human-readable}
+# ${hr}
+# ${execi /usr/lib/update-notifier/apt-check --human-readable}
 ${hr}
 ${color orange}CPU:${color} ${freq_g} GHz
-${color orange}Temp:${color}${execi 20 sensors | sed -n 7p | cut -c 17-20} C
+${color orange}Temp:${color}${execi 20 sensors | sed -n 3p | cut -c 17-20} C
 ${color orange}1:${color} ${cpu cpu1}% ${cpubar cpu1}
 ${color orange}2:${color} ${cpu cpu2}% ${cpubar cpu2}
 ${color orange}3:${color} ${cpu cpu3}% ${cpubar cpu3}
